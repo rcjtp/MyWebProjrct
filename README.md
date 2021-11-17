@@ -6,9 +6,8 @@
 - เลือกชำระเงินด้วยเงินสดหรือผ่าน Mobile Banking
 - ### Exmple Code
 
-child: 
-Column(
-          children: <Widget>[
+child: Column(
+      children: <Widget>[
             Image.asset(
               'asset/image/logo.png',
               width: 250,
