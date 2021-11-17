@@ -6,21 +6,22 @@
 - เลือกชำระเงินด้วยเงินสดหรือผ่าน Mobile Banking
 - ### Exmple Code
 
-child: Column(
-      children: <Widget>[
-            Image.asset(
-              'asset/image/logo.png',
-              width: 250,
-              height: 300,
-            ),
-            Text(
-              'เข้าสู่ระบบของคุณ',
-              style: TextStyle(
-                fontSize: 22,
-                color: Colors.black,
+ Container(
+              margin: EdgeInsets.only(),
+              padding: EdgeInsets.fromLTRB(20, 7, 20, 3),
+              child: TextFormField(
+                decoration: new InputDecoration(
+                  filled: true,
+                  fillColor: Colors.orangeAccent.shade100,
+                  labelText: "Username",
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                ),
+                controller: getName,
               ),
             ),
-  
+            
   ## Credit
   610107030014@dpu.ac.th
   ## License
