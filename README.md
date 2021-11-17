@@ -7,7 +7,7 @@
 - สามารถรู้ราคาค่าโดยสารหลังจากที่ปักหมุด
 ### Exmple Code
 ```
- child: Column(
+         child: Column(
           children: <Widget>[
             Image.asset(
               'asset/image/logo.png',
@@ -19,6 +19,50 @@
               style: TextStyle(
                 fontSize: 22,
                 color: Colors.black,
+              ),
+            ),
+            Container(
+              margin: EdgeInsets.fromLTRB(90, 10, 20, 0),
+              padding: new EdgeInsets.only(top: 0),
+            ),
+            Container(
+              margin: EdgeInsets.only(),
+              padding: EdgeInsets.fromLTRB(20, 7, 20, 3),
+              child: TextFormField(
+                decoration: new InputDecoration(
+                  filled: true,
+                  fillColor: Colors.orangeAccent.shade100,
+                  labelText: "Username",
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                ),
+                controller: getName,
+              ),
+            ),
+            Container(
+              margin: EdgeInsets.only(),
+              padding: EdgeInsets.fromLTRB(20, 7, 20, 3),
+              child: TextFormField(
+                obscureText: _obscureText,
+                decoration: new InputDecoration(
+                  filled: true,
+                  fillColor: Colors.orangeAccent.shade100,
+                  labelText: "Password",
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  suffixIcon: IconButton(
+                      icon: Icon(_obscureText
+                          ? Icons.visibility
+                          : Icons.visibility_off),
+                      onPressed: () {
+                        setState(() {
+                          _obscureText = !_obscureText;
+                        });
+                      }),
+                ),
+                controller: getPass,
               ),
             ),
 ```            
